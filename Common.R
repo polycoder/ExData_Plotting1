@@ -27,14 +27,6 @@ if(!exists("polycoder_pwr_data")) {
   polycoder_pwr_data$Date <- as.Date(polycoder_pwr_data$Date, "%d/%m/%Y")
 }
 
-hist_global_active_power <- function() {
-  hist(polycoder_pwr_data$Global_active_power, 
-       col="red", 
-       main="Global Active Power", 
-       xlab="Global Active Power (kilowatts)"
-  )
-}
-
 plot_global_active_power <- function(ylab="Global Active Power (kilowatts)") {
   plot(polycoder_pwr_data$Time, polycoder_pwr_data$Global_active_power, 
        type="o", 
