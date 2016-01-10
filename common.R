@@ -15,7 +15,7 @@ if(!exists("polycoder_pwr_data")) {
   polycoder_pwr_data <- read.csv(
     data_file,
     sep=";",
-    dec=".", 
+    dec=".",
     na.strings="?",
     header=TRUE,
     stringsAsFactors=FALSE
@@ -28,11 +28,11 @@ if(!exists("polycoder_pwr_data")) {
 }
 
 plot_global_active_power <- function(ylab="Global Active Power (kilowatts)") {
-  plot(polycoder_pwr_data$Time, polycoder_pwr_data$Global_active_power, 
-       type="o", 
-       cex=0, 
+  plot(polycoder_pwr_data$Time, polycoder_pwr_data$Global_active_power,
+       type="o",
+       cex=0,
        cex.lab=.75,
-       ylab=ylab, 
+       ylab=ylab,
        xlab=""
   )
 }
@@ -43,16 +43,16 @@ plot_sub_metering <- function(bty="o") {
 
   plot(polycoder_pwr_data$Time, polycoder_pwr_data$Sub_metering_1,
        ylim=yrange,
-       type="o", 
-       cex=0, 
+       type="o",
+       cex=0,
        cex.lab=.75,
-       ylab="Energy sub metering", 
+       ylab="Energy sub metering",
        xlab=""
   )
   lines(polycoder_pwr_data$Time, polycoder_pwr_data$Sub_metering_2,type="l",col="red")
   lines(polycoder_pwr_data$Time, polycoder_pwr_data$Sub_metering_3,type="l",col="blue")
 
-  legend("topright", 
+  legend("topright",
          c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
          lwd=c(1,1,1),
          col=c("black","red","blue"),

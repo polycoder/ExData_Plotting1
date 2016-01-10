@@ -1,5 +1,5 @@
 script.dir <- dirname(sys.frame(1)$ofile)
-source(paste(script.dir, "Common.R", sep = "/"))
+source(paste(script.dir, "common.R", sep = "/"))
 
 par(mar=c(4,4,1,1))
 par(mfrow = c(2, 2))
@@ -24,6 +24,6 @@ plot(polycoder_pwr_data$Time, polycoder_pwr_data$Global_reactive_power,
      xlab="datetime"
 )
 
-dev.copy(png,paste(script.dir, "Plot4.png", sep = "/"))
+dev.copy(png,paste(script.dir, "plot4.png", sep = "/"))
 dev.off()
 par(mfrow = c(1, 1))
