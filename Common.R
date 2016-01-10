@@ -37,7 +37,7 @@ plot_global_active_power <- function(ylab="Global Active Power (kilowatts)") {
   )
 }
 
-plot_sub_metering <- function() {
+plot_sub_metering <- function(bty="o") {
   yrange<-range(c(polycoder_pwr_data$Sub_metering_1,polycoder_pwr_data$Sub_metering_2,polycoder_pwr_data$Sub_metering_3))
   yrange[[2]] <- yrange[[2]] + 5 # +5 for padding from legend
 
@@ -56,6 +56,7 @@ plot_sub_metering <- function() {
          c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
          lwd=c(1,1,1),
          col=c("black","red","blue"),
-         cex=.75
+         cex=.75,
+         bty=bty
   )
 }
