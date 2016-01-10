@@ -25,3 +25,4 @@ plot(polycoder_pwr_data$Time, polycoder_pwr_data$Global_reactive_power,
 
 dev.copy(png,paste(script.dir, "Plot4.png", sep = "/"))
 dev.off()
+par(mfrow = c(1, 1))
